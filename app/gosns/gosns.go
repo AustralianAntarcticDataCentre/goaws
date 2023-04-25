@@ -639,7 +639,7 @@ func callEndpoint(endpoint string, subArn string, msg app.SNSMessage, raw bool) 
 	}
 
 	//req.Header.Add("Authorization", "Basic YXV0aEhlYWRlcg==")
-	req.Header.Add("Content-Type", "application/json")
+	req.Header.Add("Content-Type", "text/plain")
 	req.Header.Add("x-amz-sns-message-type", msg.Type)
 	req.Header.Add("x-amz-sns-message-id", msg.MessageId)
 	req.Header.Add("x-amz-sns-topic-arn", msg.TopicArn)
